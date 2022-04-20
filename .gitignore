@@ -1,0 +1,4 @@
+build/*
+linux-bin/*
+windows-bin/*
+__pycache__
