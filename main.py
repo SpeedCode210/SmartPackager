@@ -21,7 +21,6 @@ os.system(f"rm -rf {paths.TMP}/*")
 def generate_desktop():
     return f'''[Desktop Entry]
 Type=Application
-Version={config.VERSION}
 Name={config.NAME}
 Comment={config.DESCRIPTION}
 Icon=/usr/bin/{config.ID}/{config.ICON}
