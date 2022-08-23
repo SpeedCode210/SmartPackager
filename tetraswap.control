@@ -1,0 +1,8 @@
+Package: tetraswap
+Version: 1.3.2
+Section: base
+Priority: optional
+Maintainer: Raouf Ould Ali <raouf@eclipium.xyz>
+Description: A simple but challengeous puzzle game !
+Homepage: https://eclipium.xyz/tetraswap
+Architecture: amd64

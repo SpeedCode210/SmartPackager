@@ -1,4 +1,4 @@
-build/*
-linux-bin/*
-windows-bin/*
 __pycache__
+linux_bin/*
+windows_bin/*
+output/*
