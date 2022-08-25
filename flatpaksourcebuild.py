@@ -13,9 +13,15 @@ import os
 from PIL import Image
 
 def generate_flatpak_source():
-    print("-"*os.get_terminal_size().columns)
+    try:
+        print("-"*os.get_terminal_size().columns)
+    except:
+        print("-------------------------------------------")
     print("  SmartPackager - Building Flatpak sources archive")
-    print("-"*os.get_terminal_size().columns)
+    try:
+        print("-"*os.get_terminal_size().columns)
+    except:
+        print("-------------------------------------------")
     path = f"/tmp/flatpaksource"
     os.system(f"mkdir -p {path}")
     os.system(f'cp -R {config.BASE_DIR}/* {path}')

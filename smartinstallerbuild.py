@@ -13,9 +13,15 @@ import os
 
 
 def generate_smartinstaller():
-    print("-"*os.get_terminal_size().columns)
+    try:
+        print("-"*os.get_terminal_size().columns)
+    except:
+        print("-------------------------------------------")
     print("  SmartPackager - Building SmartInstaller archive")
-    print("-"*os.get_terminal_size().columns)
+    try:
+        print("-"*os.get_terminal_size().columns)
+    except:
+        print("-------------------------------------------")
     path = f"/tmp/smartinstaller"
     os.system(f"mkdir -p {path}/bin")
     os.system(f'cp -R {config.WIN_BASE_DIR}/* {path}/bin')

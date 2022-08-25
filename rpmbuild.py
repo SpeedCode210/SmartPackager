@@ -32,9 +32,15 @@ def __get_source_name():
     return  f"{name}-{version}"
 
 def generate_rpm():
-    print("-"*os.get_terminal_size().columns)
+    try:
+        print("-"*os.get_terminal_size().columns)
+    except:
+        print("-------------------------------------------")
     print("  SmartPackager - Building RPM Package")
-    print("-"*os.get_terminal_size().columns)
+    try:
+        print("-"*os.get_terminal_size().columns)
+    except:
+        print("-------------------------------------------")
     source_name = __get_source_name()
     __prepare_sources(source_name)
     os.system(f"rpmbuild -ba {config.RPM_SPEC_FILE}")
